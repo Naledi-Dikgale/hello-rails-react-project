@@ -1,2 +1,0 @@
-class Greeting < ApplicationRecord
-end
