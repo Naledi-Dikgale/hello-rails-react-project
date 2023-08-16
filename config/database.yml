@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: 2342
+  host: localhost
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: rails_webpack_development
+
+test:
+  <<: *default
+  database: rails_webpack_test
+
+
+production:
+  <<: *default
+  database: rails_webpack_production
+  
